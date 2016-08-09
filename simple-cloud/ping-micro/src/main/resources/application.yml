@@ -1,0 +1,9 @@
+---
+server:
+  port: 8080
+
+pongmicro:
+  ribbon:
+    DeploymentContextBasedVipAddresses: pong-micro
+    ReadTimeout: 50000
+    MaxAutoRetries: 5
