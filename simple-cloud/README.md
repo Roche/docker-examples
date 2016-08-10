@@ -15,7 +15,7 @@ Application consists of four microservices:
 - Pong service
 Moreover it uses _commons_ module to reuse components.
 
-Overall design and connection between services looks following:
+Overall design and connection between services looks following:<br>
 <img src="simple-cloud.png" width="400">
 
 ## Endpoints
