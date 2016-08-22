@@ -23,7 +23,7 @@ public class PongController {
     }
 
     private Pong pong(Ping ping) {
-        return new Pong(ping.getId(), ping.getContent(), message + " " + new Date());
+        return new Pong(ping.getId(), ping.getContent(), message + " " + new Date(), ping.getMachineID());
     }
 
 }

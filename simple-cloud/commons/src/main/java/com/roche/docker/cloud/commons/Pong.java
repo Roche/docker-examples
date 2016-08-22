@@ -2,18 +2,20 @@ package com.roche.docker.cloud.commons;
 
 import com.google.common.base.MoreObjects;
 
-public class Pong {
+public class Pong extends MachineIDAwareImpl {
 
     private String id;
     private String ping;
     private String pong;
+    private String pingIP;
 
     public Pong() { }
 
-    public Pong(String id, String ping, String pong) {
+    public Pong(String id, String ping, String pong, String pingIP) {
         this.id = id;
         this.ping = ping;
         this.pong = pong;
+        this.pingIP = pingIP;
     }
 
     public String getId() {
@@ -40,12 +42,22 @@ public class Pong {
         this.ping = ping;
     }
 
+    public String getPingIP() {
+        return pingIP;
+    }
+
+    public void setPingIP(String pingIP) {
+        this.pingIP = pingIP;
+    }
+
     @Override
     public String toString() {
         return MoreObjects.toStringHelper(this)
                 .add("id", id)
                 .add("ping", ping)
                 .add("pong", pong)
+                .add("ping-machine", pingIP)
+                .add("pong-machine", getMachineID())
                 .toString();
     }
 }

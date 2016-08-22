@@ -3,7 +3,7 @@ package com.roche.docker.cloud.commons;
 
 import com.google.common.base.MoreObjects;
 
-public class Ping {
+public class Ping extends MachineIDAwareImpl {
     private String id;
     private String content;
 
@@ -35,6 +35,7 @@ public class Ping {
         return MoreObjects.toStringHelper(this)
                 .add("id", id)
                 .add("content", content)
+                .add("ping-machine", getMachineID())
                 .toString();
     }
 }
